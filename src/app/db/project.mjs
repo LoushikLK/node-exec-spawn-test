@@ -1,6 +1,6 @@
-import { Schema, model } from "mongoose";
+import mongoose from "mongoose";
 
-const projectSchema = new Schema(
+const projectSchema = new mongoose.Schema(
   {
     metadata: {
       type: Schema.Types.Mixed,
@@ -22,4 +22,4 @@ const projectSchema = new Schema(
   }
 );
 
-export const projectModel = model("Project", projectSchema);
+export const projectModel = mongoose.model("Project", projectSchema);
