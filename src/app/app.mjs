@@ -1,11 +1,13 @@
+import dotenv from "dotenv";
 import express from "express";
+import connectToDb from "./db/connect.mjs";
 import topMiddleware from "./middlewares/toplevel.mjs";
 import router from "./router/index.mjs";
 
+dotenv.config();
+
+connectToDb();
 const app = express();
-
-console.log("running");
-
 topMiddleware(app, express);
 
 app.use("/project", router);
