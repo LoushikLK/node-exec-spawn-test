@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const projectSchema = new mongoose.Schema(
   {
     metadata: {
-      type: Schema.Types.Mixed,
+      type: mongoose.Schema.Types.Mixed,
     },
     userEmail: String,
     password: String,

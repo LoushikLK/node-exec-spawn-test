@@ -1,7 +1,7 @@
-import { Router } from "express";
+import express from "express";
 import { projectModel } from "../db/project.mjs";
 
-const router = Router();
+const router = express.Router();
 
 router.post("/:projectName", async (req, res, next) => {
   try {
